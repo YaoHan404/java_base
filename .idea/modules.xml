@@ -2,9 +2,15 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/design_pattern/design_pattern.iml" filepath="$PROJECT_DIR$/design_pattern/design_pattern.iml" />
+      <module fileurl="file://$PROJECT_DIR$/java_annotation/java_annotation.iml" filepath="$PROJECT_DIR$/java_annotation/java_annotation.iml" />
       <module fileurl="file://$PROJECT_DIR$/java_base.iml" filepath="$PROJECT_DIR$/java_base.iml" />
+      <module fileurl="file://$PROJECT_DIR$/java_collection_map_iterator/java_collection_map_iterator.iml" filepath="$PROJECT_DIR$/java_collection_map_iterator/java_collection_map_iterator.iml" />
+      <module fileurl="file://$PROJECT_DIR$/java_exception/java_exception.iml" filepath="$PROJECT_DIR$/java_exception/java_exception.iml" />
+      <module fileurl="file://$PROJECT_DIR$/java_reflection/java_reflection.iml" filepath="$PROJECT_DIR$/java_reflection/java_reflection.iml" />
+      <module fileurl="file://$PROJECT_DIR$/java_thread/java_thread.iml" filepath="$PROJECT_DIR$/java_thread/java_thread.iml" />
+      <module fileurl="file://$PROJECT_DIR$/java_useful_class/java_useful_class.iml" filepath="$PROJECT_DIR$/java_useful_class/java_useful_class.iml" />
       <module fileurl="file://$PROJECT_DIR$/leetcode/leetcode.iml" filepath="$PROJECT_DIR$/leetcode/leetcode.iml" />
-      <module fileurl="file://$PROJECT_DIR$/useful_class/useful_class.iml" filepath="$PROJECT_DIR$/useful_class/useful_class.iml" />
     </modules>
   </component>
 </project>

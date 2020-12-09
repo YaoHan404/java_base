@@ -1,9 +1,11 @@
 package l3;
+import java.util.HashMap;
+import java.util.HashSet;
 
 public class Test {
     public static void main(String[] args){
         Solution s = new Solution();
-        s.lengthOfLongestSubstring(" ");
+        System.out.println(s.lengthOfLongestSubstring1("pwwkew"));
     }
 }
 
@@ -41,4 +43,59 @@ class Solution {
 //        System.out.println(ans);
         return ans;
     }
+
+
+
+    public int lengthOfLongestSubstring1(String s) {
+        // 双指针判断字串的边界
+        // 用HashMap来存<char-出现的位置>
+        if(s.length() <= 1)
+            return s.length();
+        int left = 0;
+        int right = 0;
+        HashMap<Character, Integer> map = new HashMap();
+        int maxLength = 0;
+        while(right < s.length()){
+            if(map.containsKey(s.charAt(right))){
+                while(left<right){
+                    if(s.charAt(left) == s.charAt(right)){
+                        map.remove(s.charAt(left));
+                        left++;
+                        break;
+                    }
+                    map.remove(s.charAt(left));
+                    left++;
+                }
+            }else{
+                map.put(s.charAt(right), right);
+                right++;
+            }
+            maxLength = Math.max(maxLength, right - left);
+        }
+        // map.add()
+        return maxLength;
+    }
+
+
+    public int lengthOfLongestSubstring2(String s){
+        HashSet<Character> set = new HashSet<Character>();
+        int n = s.length();
+        int ans = 0;
+        int right = -1;
+        for(int i = 0; i < n; i++){
+            if(i != 0){
+                set.remove(s.charAt(i - 1));
+            }
+            while(right + 1 < n && !set.contains(s.charAt(right+1))){
+                set.add(s.charAt(right+1));
+                right++;
+            }
+            ans = Math.max(ans, right - i + 1);
+        }
+        return ans;
+    }
 }
+
+
+
+
